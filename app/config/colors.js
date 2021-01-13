@@ -6,4 +6,5 @@ export default {
     medium: "#6e6969",
     ivory: "#fffff0",
     lightgrey: "#e3e3e3",
+    danger: "#ff5252",
 };
