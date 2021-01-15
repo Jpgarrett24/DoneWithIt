@@ -13,16 +13,19 @@ import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import MessagesScreen from './app/screens/MessagesScreen';
+import Screen from "./app/components/Screen";
+import Icon from './app/components/Icon';
 
 const App = () => {
   return (
-    // <SafeAreaView style={styles.container}>
-    //   <Card title="Red jacket for Sale!" subTitle="$100" image={require("./app/assets/jacket.jpg")}></Card>
-    // </SafeAreaView>
-    // <WelcomeScreen></WelcomeScreen>
-    // <ViewImageScreen></ViewImageScreen>
-    // <ListingDetailsScreen image={require('./app/assets/jacket.jpg')} title="Red jacket for sale" subTitle="$100"></ListingDetailsScreen>
-    <MessagesScreen />
+    <Screen>
+      <Icon
+        name="basketball"
+        size={300}
+        backgroundColor="black"
+        iconColor="orange"
+      />
+    </Screen>
   );
 };
 

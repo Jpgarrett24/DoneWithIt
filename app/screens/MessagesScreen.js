@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, FlatList, View } from 'react-native'
+import { StyleSheet, FlatList } from 'react-native'
 
 import Screen from "../components/Screen";
 import ListItem from "../components/ListItem";
@@ -22,7 +22,8 @@ const initialMessages = [
 ]
 
 const MessagesScreen = (props) => {
-    const [messages, setMessages] = useState(initialMessages)
+    const [messages, setMessages] = useState(initialMessages);
+    const [refreshing, setRefreshing] = useState(false);
 
     const handleDelete = (message) => {
         // Delete message from messages array
@@ -47,6 +48,8 @@ const MessagesScreen = (props) => {
                         }
                     />}
                 ItemSeparatorComponent={ListItemSeparator}
+                refreshing={refreshing}
+                onRefresh={() => { setMessages(initialMessages) }}
             />
         </Screen>
     );
