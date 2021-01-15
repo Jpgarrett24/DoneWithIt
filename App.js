@@ -7,13 +7,13 @@ import {
   SafeAreaView,
 } from 'react-native';
 import colors from './app/config/colors';
-
-import Screen from "./app/components/Screen";
+import AccountScreen from './app/screens/AccountScreen';
 
 const App = () => {
   return (
-    <Screen>
-    </Screen>
+    <>
+      <AccountScreen />
+    </>
   );
 };
 
