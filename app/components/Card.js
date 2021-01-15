@@ -17,22 +17,18 @@ const Card = ({ title, subTitle, image }) => {
 
 const styles = StyleSheet.create({
     card: {
-        width: "90%",
-        height: 300,
-        borderRadius: 30,
+        borderRadius: 15,
         backgroundColor: colors.white,
-        marginTop: 50,
+        marginBottom: 20,
+        overflow: "hidden",
     },
     details: {
-        marginLeft: 25,
-        marginTop: 20,
+        padding: 20
     },
     image: {
         width: "100%",
-        height: "65%",
+        height: 200,
         resizeMode: "cover",
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
     },
     subTitle: {
         marginTop: 15,

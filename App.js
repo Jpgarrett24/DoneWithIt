@@ -1,19 +1,12 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  ImageBackground,
-  Text,
-  SafeAreaView,
-} from 'react-native';
+import { StyleSheet } from 'react-native';
 import colors from './app/config/colors';
-import AccountScreen from './app/screens/AccountScreen';
+
+import ListingsScreen from "./app/screens/ListingsScreen";
 
 const App = () => {
   return (
-    <>
-      <AccountScreen />
-    </>
+    <ListingsScreen />
   );
 };
 
