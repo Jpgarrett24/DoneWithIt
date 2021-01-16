@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 import colors from './app/config/colors';
 
-import ListingsScreen from "./app/screens/ListingsScreen";
+import Screen from "./app/components/Screen"
 
 const App = () => {
   return (
-    <>
-      <ListingsScreen />
-    </>
+    <Screen>
+    </Screen>
   );
 };
 
@@ -17,7 +16,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: colors.lightgrey,
-  }
+  },
 });
 
 export default App;
