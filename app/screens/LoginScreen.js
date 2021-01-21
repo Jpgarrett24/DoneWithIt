@@ -1,10 +1,18 @@
-import React from 'react'
-import { Image, StyleSheet } from 'react-native'
-import { Formik } from 'formik'
+import React from 'react';
+import { Image, StyleSheet } from 'react-native';;
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
-import Screen from "../components/Screen";
-import AppTextInput from "../components/AppTextInput";
+
 import AppButton from "../components/AppButton";
+import ErrorMessage from '../components/ErrorMessage';
+import Screen from "../components/Screen";
+import AppFormField from '../components/AppFormField';
+
+const validationSchema = Yup.object().shape({
+    email: Yup.string().required().email().label("Email"),
+    password: Yup.string().required().min(4).label("Password")
+})
 
 const LoginScreen = () => {
     return (
@@ -13,23 +21,24 @@ const LoginScreen = () => {
             <Formik
                 initialValues={{ email: "", password: "" }}
                 onSubmit={values => console.log(values)}
+                validationSchema={validationSchema}
             >
-                {({ handleChange, handleSubmit }) => (
+                {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
                     <>
-                        <AppTextInput
+                        <AppFormField
                             autoCapitalize="none"
                             autoCorrect={false}
                             icon="email"
                             keyboardType="email-address"
-                            onChangeText={handleChange("email")}
+                            name="email"
                             placeholder="Email"
                             textContentType="emailAddress"
                         />
-                        <AppTextInput
+                        <AppFormField
                             autoCapitalize="none"
                             autoCorrect={false}
                             icon="lock"
-                            onChangeText={handleChange("password")}
+                            name="password"
                             placeholder="password"
                             secureTextEntry
                             textContentType="password"
