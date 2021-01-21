@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImageBackground, Image, View, Text, StyleSheet, Platform } from 'react-native';
 
-import Button from '../components/Button';
+import AppButton from '../components/AppButton';
 
 const WelcomeScreen = (props) => {
     return (
@@ -14,8 +14,10 @@ const WelcomeScreen = (props) => {
                 <Image source={require("../assets/logo-red.png")} style={styles.logo} />
                 <Text style={styles.text}>Sell What You Don't Need</Text>
             </View>
-            <Button title="LOGIN" />
-            <Button title="REGISTER" color="secondary" />
+            <View style={styles.buttonsContainer}>
+                <AppButton title="LOGIN" />
+                <AppButton title="REGISTER" color="secondary" />
+            </View>
         </ImageBackground>
     );
 };
@@ -30,6 +32,10 @@ const styles = StyleSheet.create({
         position: "absolute",
         top: 70,
         alignItems: "center"
+    },
+    buttonsContainer: {
+        padding: 20,
+        width: "100%"
     },
     text: {
         paddingTop: 20,
