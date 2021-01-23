@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 
-
-import colors from './app/config/colors';
 import LoginScreen from './app/screens/LoginScreen';
+import RegisterScreen from './app/screens/RegisterScreen';
 
 const App = () => {
   return (
-    <LoginScreen />
+    // <LoginScreen />
+    <RegisterScreen />
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    backgroundColor: colors.lightgrey,
-  },
-});
+const styles = StyleSheet.create({});
 
 export default App;
 
