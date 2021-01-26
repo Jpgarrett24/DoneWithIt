@@ -8,7 +8,7 @@ import Card from "../components/Card";
 const listings = [
     {
         id: 1,
-        title: "'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas sed tempus urna. Eget mi proin sed libero enim sed faucibus. Leo urna molestie at elementum eu facilisis. Ipsum nunc aliquet bibendum enim facilisis. Gravida neque convallis a cras semper. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Viverra aliquet eget sit amet tellus. Vestibulum lectus mauris ultrices eros. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Eget nulla facilisi etiam dignissim diam quis enim lobortis s",
+        title: "Red Jacket for sale",
         price: 100,
         image: require("../assets/jacket.jpg")
     },

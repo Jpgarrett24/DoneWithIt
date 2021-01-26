@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 
-import MessagesScreen from "./app/screens/MessagesScreen";
-import ListingsScreen from "./app/screens/ListingsScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 const App = () => {
   return (
-    <MessagesScreen />
-    // <ListingsScreen />
+    <ListingEditScreen />
   );
 };
 
