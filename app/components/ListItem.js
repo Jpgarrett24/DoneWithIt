@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet, TouchableHighlight } from 'react-native';
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Swipeable from "react-native-gesture-handler/Swipeable";
 
 import colors from '../config/colors';
 
-const ListItem = ({ title, subTitle, image, IconComponent, onPress, renderRightActions }) => {
+const ListItem = ({ title, subTitle, image, IconComponent, onPress, renderRightActions, showChevrons = false }) => {
     return (
         <Swipeable renderRightActions={renderRightActions}>
-            <TouchableHighlight underlayColor={colors.lightgrey} onPress={onPress}>
+            <TouchableHighlight underlayColor={colors.black} onPress={onPress}>
                 <View style={styles.container}>
                     {IconComponent}
                     {image && <Image source={image} style={styles.image} />}
@@ -16,6 +16,7 @@ const ListItem = ({ title, subTitle, image, IconComponent, onPress, renderRightA
                         <Text style={styles.title}>{title}</Text>
                         {subTitle && <Text style={styles.subTitle}>{subTitle}</Text>}
                     </View>
+                    {showChevrons && <MaterialCommunityIcons name="chevron-right" color={colors.medium} size={25} style={{ justifyContent: "flex-end" }} />}
                 </View>
             </TouchableHighlight>
         </Swipeable>
@@ -27,10 +28,11 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         padding: 15,
         backgroundColor: colors.white,
+        alignItems: "center"
     },
     detailsContainer: {
+        flex: 1,
         marginLeft: 10,
-        justifyContent: "center",
     },
     image: {
         height: 70,
