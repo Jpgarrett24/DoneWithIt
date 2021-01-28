@@ -4,14 +4,16 @@ import * as Yup from 'yup'
 
 import CategoryPickerItem from '../components/CategoryPickerItem';
 import Screen from "../components/Screen";
-import { AppForm, AppFormField, AppFormPicker, SubmitButton } from "../components/forms/index";
+import { AppForm, AppFormField, AppFormPicker, FormImagePicker, SubmitButton } from "../components/forms/index";
 import { yupToFormErrors } from 'formik';
+
 
 const validationSchema = Yup.object().shape({
     title: Yup.string().required().min(1).label("Title"),
     price: Yup.number().required().min(1).max(10000).label("Price"),
     category: Yup.object().required().nullable().label("Category"),
-    description: Yup.string().notRequired().label("Description")
+    description: Yup.string().notRequired().label("Description"),
+    images: Yup.array().min(1, "Please select at least one image.")
 });
 
 const categories = [
@@ -30,10 +32,17 @@ const ListingEditScreen = () => {
     return (
         <Screen style={styles.container}>
             <AppForm
-                initialValues={{ title: "", price: "", category: null, description: "" }}
+                initialValues={{
+                    title: "",
+                    price: "",
+                    category: null,
+                    description: "",
+                    images: []
+                }}
                 onSubmit={values => console.log(values)}
                 validationSchema={validationSchema}
             >
+                <FormImagePicker name="images" />
                 <AppFormField
                     autoCapitalize="none"
                     autoCorrect={false}

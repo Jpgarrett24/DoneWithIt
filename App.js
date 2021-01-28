@@ -2,21 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Button, Image } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 
-import ImageInputList from "./app/components/ImageInputList";
+
 import Screen from "./app/components/Screen";
+import ListingEditScreen from './app/screens/ListingEditScreen';
 
 const App = () => {
   const [imageUris, setImageUris] = useState([]);
 
 
   return (
-    <Screen>
-      <ImageInputList
-        imageUris={imageUris}
-        onAddImage={handleAdd}
-        onRemoveImage={handleRemove}
-      />
-    </Screen>
+    <ListingEditScreen />
   );
 };
 
