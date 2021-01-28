@@ -8,13 +8,6 @@ import Screen from "./app/components/Screen";
 const App = () => {
   const [imageUris, setImageUris] = useState([]);
 
-  const handleAdd = (uri) => {
-    setImageUris([...imageUris, uri])
-  };
-
-  const handleRemove = (uri) => {
-    setImageUris(imageUris.filter((image) => image !== uri));
-  };
 
   return (
     <Screen>
