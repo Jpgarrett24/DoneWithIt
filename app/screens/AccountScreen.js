@@ -20,12 +20,13 @@ const menuItems = [
         title: "My Messages",
         icon: {
             name: "email",
-            backgroundColor: colors.secondary
-        }
+            backgroundColor: colors.secondary,
+        },
+        targetScreen: "Messages"
     }
 ]
 
-const AccountScreen = () => {
+const AccountScreen = ({ navigation }) => {
     return (
         <Screen style={styles.screen}>
             <View style={styles.container}>
@@ -48,6 +49,8 @@ const AccountScreen = () => {
                                     backgroundColor={item.icon.backgroundColor}
                                 />
                             }
+                            showChevrons={true}
+                            onPress={() => navigation.navigate(item.targetScreen)}
                         />
                     }
                     ItemSeparatorComponent={ListItemSeparator}
@@ -56,6 +59,7 @@ const AccountScreen = () => {
             <ListItem
                 title="Log Out"
                 IconComponent={<Icon name="logout" backgroundColor="#6d72ff" />}
+                showChevrons={true}
             />
         </Screen>
     );

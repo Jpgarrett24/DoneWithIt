@@ -3,8 +3,9 @@ import { StyleSheet } from 'react-native';
 import * as Yup from 'yup';
 
 import CategoryPickerItem from '../components/CategoryPickerItem';
+import FormImagePicker from "../components/forms/FormImagePicker";
 import Screen from "../components/Screen";
-import { AppForm, AppFormField, AppFormPicker, FormImagePicker, SubmitButton } from "../components/forms/index";
+import { AppForm, AppFormField, AppFormPicker, SubmitButton } from "../components/forms/index";
 import useLocation from '../hooks/useLocation';
 
 
