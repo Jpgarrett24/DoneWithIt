@@ -3,7 +3,7 @@ import { ImageBackground, Image, View, Text, StyleSheet, Platform } from 'react-
 
 import AppButton from '../components/AppButton';
 
-const WelcomeScreen = (props) => {
+const WelcomeScreen = ({ navigation }) => {
     return (
         <ImageBackground
             source={require("../assets/background.jpg")}
@@ -15,8 +15,8 @@ const WelcomeScreen = (props) => {
                 <Text style={styles.text}>Sell What You Don't Need</Text>
             </View>
             <View style={styles.buttonsContainer}>
-                <AppButton title="LOGIN" />
-                <AppButton title="REGISTER" color="secondary" />
+                <AppButton title="Login" onPress={() => navigation.navigate("Login")} />
+                <AppButton title="Register" color="secondary" onPress={() => navigation.navigate("Register")} />
             </View>
         </ImageBackground>
     );
