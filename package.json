@@ -34,7 +34,8 @@
     "react-native-screens": "~2.15.0",
     "react-native-web": "~0.13.12",
     "yup": "^0.32.8",
-    "expo-blur": "~8.2.2"
+    "expo-blur": "~8.2.2",
+    "expo-constants": "~9.3.3"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"
