@@ -10,8 +10,6 @@ import ContactSellerForm from '../components/ContactSellerForm';
 const ListingDetailsScreen = ({ user, profilepic, listings, route }) => {
     const listing = route.params;
 
-    const handleSubmit = () => console.log('Submitted');
-
     return (
         <KeyboardAvoidingView
             behavior="position"
